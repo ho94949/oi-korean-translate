@@ -1,0 +1,105 @@
+\begin{problem}{3단 점프}
+	{standard input}{standard output}
+	{4 seconds}{512 megabytes}{}
+	
+	매우 긴 도로에 1부터 $N$까지의 번호가 붙어있는 $N$개의 위치가 있다. 각 위치마다 도로의 강도가 다를 수 있으며, $i$번째 ($1 \le i \le N$) 위치의 도로의 강도는 $A_i$이다.
+	
+	스포츠 스타 JOI군은 3단 점프를 하려고 한다. 3단 점프는 3개의 연속된 점프로 이루어 져 있다. JOI군이 $a$, $b$, $c$번째 위치에서 점프를 하려고 하면, 다음 조건을 만족해야 한다.
+	
+	\begin{itemize}
+		\item $a<b<c$. 즉, 점프하는 곳의 번호는 증가해야 한다.
+		\item $b-a \le c-b$. 즉, 첫번째 점프의 거리보다 두번째 점프의 거리가 작거나 같아야 한다.
+	\end{itemize}
+
+	JOI군은 Q번의 3단 점프를 하려고 한다. $j$번째 ($1 \le j \le Q$)의 3단 점프에서는 $L_j$번째 이상 $R_j$번째 이하의 위치에서만 3단 점프를 해야 한다. 즉 $L_j \le a < b < c \le R_j$가 성립하여야 한다.
+	
+	JOI군은 강도가 높은 곳에서 3단 점프를 하고 싶어 한다. 각 3단 점프 마다 JOI군은 자신이 점프를 하는 세 위치에서의 강도의 합의 최댓값을 알고 싶다.
+	
+	위치의 정보와 3단 점프의 정보가 주어졌을 때, 각 점프마다 JOI군이 점프를 하는 세 위치에서의 강도의 합의 최댓값을 구하는 프로그램을 작성하여라.
+	
+	
+	\InputFile
+	
+	표준 입력에서 다음과 같은 형식으로 주어진다. 모든 값은 정수이다.
+
+	$N$
+	
+	$A_1$ $A_2$ $\cdots$ $A_N$
+	
+	$Q$
+	
+	$L_1$ $R_1$
+	
+	$L_2$ $R_2$
+	
+	$\vdots$
+	
+	$L_Q$ $R_Q$
+	
+	\OutputFile
+	
+	표준 출력으로 $Q$개의 출을 출력하여라. $j$번째 ($1 \le j \le Q$)줄은 JOI군이 점프를 하는 세 위치에서의 강도의 합의 최댓값 이어야 한다.
+	
+	\Constraints
+	
+	\begin{itemize}
+	
+	\item $3 \le N \le 500\ 000$.
+	\item $1 \le A_i \le 100\ 000\ 000$ ($1 \le i \le N$).
+	\item $1 \le Q \le 500\ 000$
+	\item $1 \le L_j < L_j + 2 \le R_j \le N$ ($1 \le j \le Q$).
+		
+	\end{itemize}
+	
+	
+	\SubtaskWithCost{1}{5}
+	\begin{itemize}
+		\item $N \le 100$
+		\item $Q \le 100$
+	\end{itemize}
+	
+	\SubtaskWithCost{2}{14}
+	\begin{itemize}
+		\item $N \le 5\ 000$
+	\end{itemize}
+	
+	
+	\SubtaskWithCost{3}{27}
+	\begin{itemize}
+		\item $N \le 200\ 000$, $Q=1$, $L_1=1$, $R_1=N$
+	\end{itemize}
+	
+	\SubtaskWithCost{4}{54}
+	
+	추가 제한조건이 없다.
+	
+	\Examples
+		
+	\begin{example}
+	\exmp{
+5
+5 2 1 5 3
+3
+1 4
+2 5
+1 5
+	}{%
+12
+9
+12
+	}%
+	\end{example}
+
+	\Note
+	
+	첫번째 점프에서, JOI군은 1번, 2번, 4번 위치에서 점프를 하면 최대 강도의 합 12를 얻을 수 있다.
+	
+	두번째 점프에서, JOI군은 3번, 4번, 5번 위치에서 점프를 하면 최대 강도의 합 9를 얻을 수 있다. 만약 2번, 4번, 5번 위치에서 점프를 하면 최대 강도의 합은 10이지만, $b-a \le c-b$를 만족하지 않는다.
+	
+	세번째 점프에서, JOI군은 1번, 2번, 4번 위치에서 점프를 하면 최대 강도의 합 12를 얻을 수 있다. 만약 1번, 4번, 5번 위치에서 점프를 하면 최대 강도의 합은 13이지만, $b-a \le c-b$를 만족하지 않는다.
+	
+	
+	
+	
+\end{problem}
+
