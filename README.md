@@ -13,7 +13,7 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
 
 ### JOI Open 
 
-- 2019
+- [2019](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Open/2019/JOIOC2019.pdf) 
   - 3단 점프 (Jumps)
   - 송금 (Remittance)
   - 바이러스 (Virus)
@@ -21,11 +21,11 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
 ### JOI Spring Camp
 
 - 2019 (6/12)
-  - Day 1
+  - [Day 1](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2019/Day1/JOISC2019Day1.pdf)
     - 시험 (Examination)
     - 비버의 모임 (Meetings)
     - 난 (Naan)
-  - Day 2
+  - [Day 2](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2019/Day2/JOISC2019Day2.pdf)
     - 두 안테나 (antennas)
     - 두 요리 (dishes)
     - 두 운송수단 (transportations)
@@ -67,7 +67,6 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
     - 화물 (zal)
 
 - XX OI (POI 2012- 2013) (4/17)
-
   - Round I (1/5)
     - Price List (cen)
     - Tapestries (gob)
@@ -94,37 +93,27 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
     - 양극화 (pol)
 
 - XIX OI (POI 2011-2012) (6/17)
-
   - Round I (2/5)
-
     - 축제 (fes)
     - Letters (lit)
     - Distance (odl)
     - Rendezvous (ran)
     - 우물 (stu)
-
   - Round II - day 0
-
     - 지구이웨를 둘러보다 (tou)
-
   - Round II - day 1 (1/ 2)
-
     - Vouchers (bon)
     - 휴대품 보관소 (sza)
-
   - Round II - day 2 (0/2)
-
     - A Horrible Poem (okr)
     - Fibonacci Representation (roz)
 
   - Round III - day 1 (1/3)
-
     - Bidding (lic)
     - 월급 (pen)
     - Leveling Ground (wyr)
 
   - Round III - day 2 (1/3)
-
     - Minimalist Security (bez)
     - 벽돌 매장 (hur)
     - Prefixuffix (pre)
@@ -132,44 +121,26 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
 - XVIII OI (POI 2010-2011) (6/17)
 
   - Round I (1/5)
-
     - Conspiracy (kon)
     - Lollipop (liz)
     - Lightning Conductor (pio)
     - 회전 (prz)
     - Plot (wyk)
-    
-     - Round II - day 0 (0/1)
-  
-  
-          -  Strongbox (sej)
-  
+  - Round II - day 0 (0/1)
+    - Strongbox (sej)
   - Round II - day 1 (1/2)
-  
-  
     -  Difference (roz)
     -  쓰레기 (smi)
-  
   - Round II - day 2
-  
-  
     - 트리 회전 (rot)
     - 온도 (tem)
-  
   - Round III - day 0 (0/0)
-  
     - Dynamite (dyn)
-  
   - Round III - day 1 (1/3)
-  
-  
     - 파티 (imp)
     - Inspection (ins)
     - Periodicity (okr)
-  
   - Round III - day 2 (0/3)
-  
-  
     - Meteors (met)
     - Sticks (pat)
     - Programming Contest (pro)
