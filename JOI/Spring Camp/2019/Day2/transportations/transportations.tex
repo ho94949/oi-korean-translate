@@ -2,7 +2,237 @@
 	{standard input}{standard output}
 	{1.5 seconds}{256 megabytes}{}
 	
+	JOI 나라에는 0부터 $N-1$까지의 번호가 붙은 도시 $N$개가 있다. JOI 나라에는 $A$개의 전철노선이 있고, 0번 부터 $A-1$번 까지의 번호가 붙어 있다. $i$번 ($0 \le i \le A-1$) 전철 노선은 $U_i$번 도시와 $V_i$번 도시를 양방향으로 잇는다. 이 노선의 운임은 $C_i$이다. 서로 다른 전철 노선은 서로 다른 쌍의 도시를 잇는다.
+	또한, $B$개의 버스노선이 있고, 0번 부터 $B-1$번 까지의 번호가 붙어 있다. $j$번 ($0 \le j\le B-1$) 버스 노선은 $S_j$번 도시와 $T_j$번 도시를 양방향으로 잇는다. 이 노선의 운임은 $D_j$이다. 서로 다른 버스 노선은 서로 다른 쌍의 버스를 잇는다. 하지만, 전철 노선과 버스 노선은 같은 쌍의 도시를 이을수도 있다. 전철 혹은 버스를 사용하면 어떠한 쌍의 도시도 오갈 수 있다.
+	
+	Azer는 0번 도시로 부터 각 도시까지 가기 위한 최소 운임을 알고 싶다. Azer는 전철 노선만 알고 있기 때문에, 그는 버스 노선만 아는 Baijan과 협력해야 한다.
+	
+	그들은 서로 문자 0 혹은 1을 주고 받으면서 통신한다. 보내는 총 문자의 갯수는 58 000개 이하여야 한다.
+	
+	전철노선의 정보가 주어진 Azer과, 버스노선의 정보가 주어진 Baijan 사이에서 서로 통신하고 Azer가 0번 도시부터 각 도시까지 가기 위한 최소 운임을 출력하여라.
+	
+	\Specification
+	
+	당신은 파일 두 개를 제출해야 한다.
+	
+	첫째 파일의 이름은 \texttt{Azer.cpp}이다. 이 파일은 Azer의 일을 나타내고, 다음 함수를 구현해야 한다. 또한, \texttt{Azer.h}를 include해야 한다.
+
+	\begin{itemize}
+		\item \texttt{void InitA(int N, int A, std::vector<int> U, std::vector<int> V, std::vector<int> C)}
+		
+		이 함수는 프로그램 시작시에 정확히 한 번 불린다.
+		\begin{itemize}
+			\item 인자 \texttt{N}은 도시의 수 $N$을 나타낸다.
+			\item 인자 \texttt{A}는 전철노선의 수 $A$를 나타낸다.
+			\item 인자 \texttt{U}, \texttt{V}는 길이 $A$의 배열이다. \texttt{U[i]}와 \texttt{V[i]}는 전철노선이 연결하는 두 도시 $U_i$번과 $V_i$번을 나타낸다. ($0 \le i \le A-1$)
+			\item 인자 \texttt{C}는 길이 $A$의 배열이다. \texttt{C[i]}는 $i$번 전철노선의 운임 $C_i$를 나타낸다. ($0 \le i \le A-1$)
+		\end{itemize}
+		
+		\item \texttt{void ReceiveA(bool x)}
+		이 함수는 Baijan으로 부터 문자를 받았을 때 마다 호출 된다.
+		\begin{itemize}
+			\item 인자 \texttt{x}는 Baijan으로부터 받은 문자를 나타낸다. \texttt{true}이면 1, \texttt{false}이면 0을 받은 것이다.
+		\end{itemize}
+		
+		\item \texttt{std::vector<int> Answer()}
+		이 함수는 보내진 모든 문자를 받았을 때 실행된다. 이 함수는 0번 도시로부터 각 도시간의 최단거리를 담은 배열 \texttt{Z}를 반환해야 한다.
+		\begin{itemize}
+			\item 배열 \texttt{Z}는 길이가 $N$이어야 한다. 길이가 $N$이 아닌 경우에, 프로그램은 \textbf{오답 [1]}이 된다.
+			\texttt{Z[k]} ($0 \le k \le N-1$)은 0번 도시 부터 $k$번 도시까지 가는데 필요한 운임의 최솟값이어야 한다. 특히, \texttt{Z[0]} = 0 이어야 함에 유의하여라.
+		\end{itemize}
+	\end{itemize}
+
+	이 프로그램은 다음 함수를 호출 할 수 있다.
+
+	\begin{itemize}
+		\item \texttt{void sendA(bool y)}
+		
+		Baijan에게 문자를 보내려면 이 함수를 사용해야 한다.
+		
+		\begin{itemize}
+			\item 인자 \texttt{y}는 Baijan에게 보내는 문자를 나타낸다. \texttt{true}이면 1, \texttt{false}이면 0을 보낸 것이다.
+		\end{itemize}
+		
+	\end{itemize}
+		
+	둘째 파일의 이름은 \texttt{Baijan.cpp}이다. 이 파일은 Baijan의 일을 나타내고, 다음 함수를 구현해야 한다. 또한, \texttt{Baijan.h}를 include해야 한다.
+
+	\begin{itemize}
+		\item \texttt{void InitB(int N, int B, std::vector<int> S, std::vector<int> T, std::vector<int> D)}
+		
+		이 함수는 프로그램 시작시에 정확히 한 번 불린다.
+		\begin{itemize}
+			\item 인자 \texttt{N}은 도시의 수 $N$을 나타낸다.
+			\item 인자 \texttt{B}는 버스노선의 수 $A$를 나타낸다.
+			\item 인자 \texttt{S}, \texttt{T}는 길이 $B$의 배열이다. \texttt{S[j]}와 \texttt{T[j]}는 전철노선이 연결하는 두 도시 $S_j$번과 $T_j$번을 나타낸다. ($0 \le j \le B-1$)
+			\item 인자 \texttt{D}는 길이 $A$의 배열이다. \texttt{D[j]}는 $i$번 버스노선의 운임 $D_j$를 나타낸다. ($0 \le j \le B-1$)
+		\end{itemize}
+		
+		\item \texttt{void ReceiveB(bool y)}
+		이 함수는 Azer로 부터 문자를 받았을 때 마다 호출 된다.
+		\begin{itemize}
+			\item 인자 \texttt{y}는 Azer로부터 받은 문자를 나타낸다. \texttt{true}이면 1, \texttt{false}이면 0을 받은 것이다.
+		\end{itemize}
+		
+	\end{itemize}
+	
+	이 프로그램은 다음 함수를 호출 할 수 있다.
+	
+	\begin{itemize}
+		\item \texttt{void sendB(bool x)}
+		
+		Azer에게 문자를 보내려면 이 함수를 사용해야 한다.
+		
+		\begin{itemize}
+			\item 인자 \texttt{x}는 Azer에게 보내는 문자를 나타낸다. \texttt{true}이면 1, \texttt{false}이면 0을 보낸 것이다.
+		\end{itemize}
+		
+	\end{itemize}
+		
+	
+	당신은 프로그램이 다음과 같은 방법으로 실행된다는 것을 가정해도 좋다. 각 테스트 케이스 마다 Azer가 보낸 문자들을 담는 큐 $Q_Y$와 Baijan이 보낸 문자들을 담는 큐 $Q_X$, 두 개의 큐가 준비된다.
+	처음에, \texttt{InitA}와 \texttt{InitB}가 실행되고, 보낸 문자들은 각각 큐에 push된다.
+	
+	\begin{itemize}
+		\item $Q_X$나 $Q_Y$가 비어있지 않으면, 문자 하나가 비어있지 않은 큐로 부터 pop되고, 해당하는 \texttt{ReceiveA}혹은 \texttt{ReceiveB}가 호출된다. 단, $Q_X$와 $Q_Y$가 모두 비어있지 않을 경우에, \texttt{ReceiveA}와 \texttt{ReceiveB}중 어느쪽이 호출되는지는 결정되어있지 않다.
+		\item \texttt{ReceiveA}의 호출 도중에 \texttt{SendA}가 실행 된 경우, 보내진 문자는 $Q_Y$에 push된다.
+		\item \texttt{ReceiveB}의 호출 도중에 \texttt{SendB}가 실행 된 경우, 보내진 문자는 $Q_X$에 push된다.
+		\item 두 큐가 모두 빈 경우에는, \texttt{Answer}이 호출되고 프로그램이 종료된다.
+	\end{itemize}
+	
+	Azer와 Baijan이 보낸 문자의 총 갯수는 58\ 000보다 작거나 같아야 한다. 만약 더 큰 경우에는, \textbf{오답 [2]}가 된다.
+	
+	\Notes
+	
+	\begin{itemize}
+		\item 당신의 프로그램은 내부에서 사용할 목적으로 함수나 전역변수를 사용할 수 있다. 제출된 파일들은 같이 컴파일 되어 하나의 실행 파일이 된다. 모든 글로벌 변수나 함수는 충돌을 피하기 위하여 이름이 없는 namespace에 구현되어야 한다. 채점 될 때는, Azer과 Baijan에 해당하는 두 프로세스로 나누어서 실행 될 것이다. Azer의 프로세스와 Baijan의 프로세스는 전역변수를 공유할 수 없다.
+		\item 당신의 프로그램은 표준 입출력을 사용해서는 안된다. 당신의 프로그램은 어떠한 방법으로도 다른 파일에 접근해서는 안된다. 단, 당신의 프로그램은 디버그 목적으로 표준 에러출력에 출력할 수 있다.
+	\end{itemize}
+	
+	당신은 대회 홈페이지의 아카이브에서 프로그램을 테스트 하기 위한 목적의 샘플 그레이더를 받을 수 있다. 아카이브는 당신의 프로그램의 예제 소스 또한 첨부되어 있다.
+	샘플 그레이더는 파일 \texttt{grader.cpp}이다. 당신의 프로그램을 테스트 하기 위해서, \texttt{grader.cpp}, \texttt{Azer.cpp}, \texttt{Baijan.cpp}, \texttt{Azer.h}, \texttt{Baijan.h}를 같은 디렉토리 안에 놓고, 컴파일 하기 위해 다음 커맨드를 실행하여라.
+	
+	\begin{itemize}
+		\item \texttt{g++ -std=gnu++14 -O2 -o grader grader.cpp Azer.cpp Baijan.cpp}
+	\end{itemize}
+	
+	컴파일이 성공적이면, 파일 \texttt{grader}가 생성된다.
+	
+	실제 그레이더와 샘플 그레이더는 다름에 주의하여라. 샘플 그레이더는 하나의 프로세스에서 실행 되며, 입력을 표준 입력으로 부터 받고, 출력을 표준 출력에 출력한다.
+	
+	\InputFile
+	
+	샘플 그레이더는 표준 입력에서 다음과 같은 형식으로 입력받는다.
+	
+	$N$ $A$ $B$
+	
+	$U_0$ $V_0$ $C_0$
+	
+	$\vdots$
+	
+	$U_{A-1}$ $V_{A-1}$ $C_{A-1}$
+
+	$S_0$ $T_0$ $D_0$
+
+	$\vdots$
+	
+	$S_{A-1}$ $T_{A-1}$ $D_{A-1}$	
+	
+	\OutputFile
+	
+	프로그램이 정상적으로 종료되었다면, 샘플 그레이더는 다음과 같은 정보를 표준 출력 및 표준 에러에 출력한다. (따옴표는 출력하지 않는다.)
+	
+	\begin{itemize}
+		\item 오답[1] 혹은 오답 [2]로 판단 된 경우, 오답의 종류를 ``\texttt{Wrong Answer [1]}"과 같은 형식으로 표준 에러에 출력한다. 표준 출력에는 아무것도 출력되지 않는다.
+		
+		\item 아닌 경우, 보낸 문자의 총 갯수 $L$을 ``\texttt{Accepted: L}"과 같은 형식으로 표준 에러에 출력한다. 또한, 표준 출력에 답 \texttt{Z}를 다음과 같은 형식으로 출력한다:
+		
+		\texttt{Z[0]}
+
+		$\vdots$
+
+		\texttt{Z[N - 1]}
+		
+		샘플 그레이더는 \texttt{Z}가 올바른지 검사하지 않는다.
+	\end{itemize}
+	
+	프로그램이 다양한 오답의 종류에 속해 있을 경우, 샘플 그레이더는 그 중 하나만 출력 할 것이다.
+	
+	\Constraints
+	
+	\begin{itemize}
+		\item $3 \le N \le 2\ 000$.
+		\item $0 \le A \le 500\ 000$.
+		\item $0 \le B \le 500\ 000$.
+		\item $0 \le U_i \le N-1$. ($0 \le i \le A-1$)
+		\item $0 \le V_i \le N-1$. ($0 \le i \le A-1$)
+		\item $U_i \ne V_i$. ($0 \le i \le A-1$)
+		\item $(U_{i_1},\ V_{i_1}) \ne (U_{i_2},\ V_{i_2})$ 이고, $(U_{i_1},\ V_{i_1}) \ne (V_{i_2},\ U_{i_2})$ 이다. ($0 \le i_1 < i_2 \le A-1$)
+		\item $0 \le S_j \le N-1$. ($0 \le j \le B-1$)
+		\item $0 \le T_j \le N-1$. ($0 \le j \le B-1$)
+		\item $S_j \ne T_j$. ($0 \le j \le B-1$)
+		\item $(S_{j_1},\ T_{j_1}) \ne (S_{j_2},\ T_{j_2})$ 이고, $(S_{j_1},\ T_{j_1}) \ne (T_{j_2},\ S_{j_2})$ 이다. ($0 \le j_1 < j_2 \le B-1$)
+		\item 전철 혹은 버스를 사용하면 어떠한 쌍의 도시도 오갈 수 있다.
+		\item $1 \le C_i \le 500$. ($0 \le i \le A-1$)
+		\item $1 \le D_j \le 500$. ($0 \le j \le B-1$) 
+	\end{itemize}
 	
 	
+	
+	
+	\SubtaskWithCost{1}{6}
+	\begin{itemize}
+		\item $A = 0$
+	\end{itemize}
+	
+	\SubtaskWithCost{2}{8}
+	\begin{itemize}
+		\item $B \le 1\ 000$
+	\end{itemize}
+	
+	\SubtaskWithCost{3}{8}
+	\begin{itemize}
+		\item $A+B = N-1$
+	\end{itemize}
+
+	\SubtaskWithCost{4}{38}
+	\begin{itemize}
+	\item $N \le 900$
+	\end{itemize}
+	
+	\SubtaskWithCost{5}{14}
+	\begin{itemize}
+		\item $N \le 1\ 100$
+	\end{itemize}
+	
+	\SubtaskWithCost{6}{10}
+	\begin{itemize}
+		\item $N \le 1\ 400$
+	\end{itemize}
+
+	
+	
+	\SubtaskWithCost{7}{16}
+	
+	추가 제한조건이 없다.
+	
+	\Examples
+	
+	이 함수는 그레이더의 예제 입력과 해당하는 함수 호출을 보여준다.
+	
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		\multirow{2}{*}{예제 입력}                                                             & \multicolumn{3}{l|}{예제 함수 호출}    \\ \cline{2-4} 
+		& 호출       & 호출             & 반환값  \\ \hline
+		\multirow{9}{*}{\begin{tabular}[c]{@{}l@{}}\texttt{4 3 4}\\ \texttt{0 1 6}\\ \texttt{2 1 4}\\ \texttt{2 0 10}\\ \texttt{1 2 3}\\ \texttt{3 1 1}\\ \texttt{3 2 3}\\ \texttt{3 0 7}\end{tabular}} & \texttt{InitA(4, 3, \{0,2,2\}, \{1,1,0\}, \{6,4,10\})} &                &      \\ \cline{2-4} 
+		&          & \texttt{SendA(true)} &    \\ \cline{2-4} 
+		&          & \texttt{SendA(false)} &    \\ \cline{2-4} 
+		& \texttt{InitB(4, 4, \{1,3,3,3\}, \{2,1,2,0\}, \{3,1,3,7\}} & & \\ \cline{2-4} 
+		& \texttt{ReceiveB(true)} & & \\ \cline{2-4} 
+		&          & \texttt{SendB(true)}   &  \\ \cline{2-4} 
+		& \texttt{ReceiveA(true)} & & \\ \cline{2-4} 
+		& \texttt{ReceiveB(false)} & & \\ \cline{2-4} 
+		& \texttt{Answer()} &  &  \texttt{\{0,6,9,7\}}\\ \hline
+	\end{tabular}
 \end{problem}
 
