@@ -1,0 +1,107 @@
+\begin{problem}{램프}
+	{standard input}{standard output}
+	{1 second}{256 megabytes}{}
+	
+	긴 복도에 $N$개의 램프가 일렬로 나열되어 있다. 램프는 왼쪽부터 차례로 1번부터 $N$번까지의 번호가 붙어있다. 각 램프는 off또는 on중 하나의 상태이다.
+	
+	램프의 상태를 바꾸는 특별한 기작이 있어서, 한 번의 작업으로 다음 셋 중 한 가지 동작을 할 수 있다.
+	
+	\begin{itemize}
+		\item $1 \le p \le q \le N$을 만족하는 정수 $p$와 $q$를 골라서 $p$, $p+1$, $\cdots$, $q$를 off 상태로 만든다.
+		\item $1 \le p \le q \le N$을 만족하는 정수 $p$와 $q$를 골라서 $p$, $p+1$, $\cdots$, $q$를 on 상태로 만든다.
+		\item $1 \le p \le q \le N$을 만족하는 정수 $p$와 $q$를 골라서 $p$, $p+1$, $\cdots$, $q$의 상태를 바꾼다. (off를 on으로, on을 off로)
+	\end{itemize} 
+
+	처음에 램프의 상태는 길이 $N$의 문자열 $A$로 표현된다. $A$의 $i$ 번째 ($1 \le i \le N$) 문자가 \texttt{0}이면 $i$ 번째 램프가 off 상태인 것이고, \texttt{1}이면 on 상태인 것이다. 우리는 만들고 싶은 상태가 길이 $N$의 문자열 $B$로 표현 되어 있고, 작업의 수를 최소한으로 하여 만들고 싶다. $B$의 $i$ 번째 ($1 \le i \le N$) 문자가 \texttt{0}이면 $i$ 번째 램프가 off 상태인 것이고, \texttt{1}이면 on 상태인 것이다. 
+	
+	램프의 수와, 현재 상태와 만들고 싶은 상태가 주어졌을 때, 만들고 싶은 상태로 바꾸는데에 드는 연산의 수의 최솟값을 출력하여라.
+
+	\InputFile
+	
+	표준 입력에서 다음과 같은 형식으로 주어진다.
+	
+	$N$
+
+	$A$
+
+	$B$
+	
+	
+	\OutputFile
+	
+	표준 출력으로 한 개의 줄을 출력하여라. 이는 원하는 상태를 만들기 위한 연산의 수의 최솟값이다.
+		
+	\Constraints
+	
+	\begin{itemize}
+		\item $1 \le N \le 1\ 000\ 000$.
+		\item $A$와 $B$는 길이 $N$의 문자열이다.
+		\item $A$와 $B$를 이루는 문자들은 \texttt{0}혹은 \texttt{1}이다.
+	\end{itemize}
+	
+	
+	\SubtaskWithCost{1}{6}
+	\begin{itemize}
+		\item $N \le 18$
+	\end{itemize}
+
+
+	\SubtaskWithCost{2}{41}
+	\begin{itemize}
+		\item $N \le 2000$
+	\end{itemize}
+
+
+	\SubtaskWithCost{3}{4}
+	\begin{itemize}
+		\item $A$를 이루는 각 문자는 \texttt{0}이다.
+	\end{itemize}
+	
+	\SubtaskWithCost{4}{49}
+	
+	추가 제한조건이 없다.
+	
+	\Examples
+	
+	\begin{example}
+		\exmp{
+			8
+			11011100
+			01101001
+		}{%
+			4
+		}%
+	\end{example}
+	
+	이 입력에서 우리는 원하는 상태를 다음과 같은 방법으로 네 번의 작업으로 만들수 있다.
+	
+	\begin{enumerate}
+
+		\item 1, 2, 3, 4번 램프의 상태를 바꾼다. 램프의 상태는 \texttt{00101100}이 된다.
+		\item 2번 램프를 off 상태로 만든다. 램프의 상태는 \texttt{01101100}이 된다.
+		\item 6, 7, 8번 램프의 상태를 바꾼다. 램프의 상태는 \texttt{01101011}이 된다.
+		\item 6, 7번 램프를 on 상태로 만든다. 램프의 상태는 \texttt{01101001}이 된다.
+	\end{enumerate}
+	
+	네 번보다 더 적은 작업으로 원하는 상태를 만들 수 있는 방법은 없으므로, 4를 출력한다.
+	
+	\begin{example}
+		\exmp{
+13
+1010010010100
+0000111001011
+		}{%
+3
+		}%
+		\exmp{
+18
+001100010010000110
+110110001000100101
+}{%
+5
+}%
+	\end{example}
+	
+	
+\end{problem}
+
