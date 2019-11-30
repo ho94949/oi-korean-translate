@@ -7,8 +7,6 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
 
 **I do not own these problems.**
 
-
-
 ## JOI
 
 ### JOI Open 
@@ -22,17 +20,17 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
 
 - 2019 (6/12)
   - [Day 1](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2019/Day1/JOISC2019Day1.pdf)
-    - 시험 (Examination)
-    - 비버의 모임 (Meetings)
-    - 난 (Naan)
+    - 시험 (examination)
+    - 비버의 모임 (meetings)
+    - 난 (naan)
   - [Day 2](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2019/Day2/JOISC2019Day2.pdf)
     - 두 안테나 (antennas)
     - 두 요리 (dishes)
     - 두 운송수단 (transportations)
-  - Day 3 (0/3)
-    - Designated Cities
-    - Lamps
-    - Bitaro, who Leaps through Time
+  - [Day 3](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2019/Day3/JOISC2019Day3.pdf)
+    - 특별관광도시 (designated)
+    - 램프 (lamps)
+    - 시간을 달리는 비타로 (timeleap)
   - Day 4 (0/3)
     - Cake 3
     - Mergers
@@ -40,7 +38,7 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
 
 ## POI
 
-- XXI OI (POI 2013-2014)
+- [XXI OI (POI 2013-2014)](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/POI/XXI/OI21.pdf)
   - Round I
     - 샐러드바 (bar)
     - 호텔 (hot)
@@ -107,19 +105,16 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
   - Round II - day 2 (0/2)
     - A Horrible Poem (okr)
     - Fibonacci Representation (roz)
-
   - Round III - day 1 (1/3)
     - Bidding (lic)
     - 월급 (pen)
     - Leveling Ground (wyr)
-
   - Round III - day 2 (1/3)
     - Minimalist Security (bez)
     - 벽돌 매장 (hur)
     - Prefixuffix (pre)
 
 - XVIII OI (POI 2010-2011) (6/17)
-
   - Round I (1/5)
     - Conspiracy (kon)
     - Lollipop (liz)
