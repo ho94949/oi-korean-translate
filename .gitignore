@@ -220,4 +220,5 @@ TSWLatexianTemp*
 *-tags.tex
 
 # distributed style files
-/**/olymp.sty
+olymp.sty
+!/olymp.sty
