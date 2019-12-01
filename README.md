@@ -32,9 +32,9 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
     - 램프 (lamps)
     - 시간을 달리는 비타로 (timeleap)
   - [Day 4](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2019/Day1/JOISC2019Day4.pdf)
-    - Cake 3
-    - Mergers
-    - Minerals 
+    - 케이크 3 (cake3)
+    - 합병 (mergers)
+    - 광물 (minerals) 
 
 ## POI
 
@@ -129,7 +129,7 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
   - Round II - day 2
     - 트리 회전 (rot)
     - 온도 (tem)
-  - Round III - day 0 (0/0)
+  - Round III - day 0 (0/1)
     - Dynamite (dyn)
   - Round III - day 1 (1/3)
     - 파티 (imp)
