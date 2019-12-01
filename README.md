@@ -18,7 +18,7 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
 
 ### JOI Spring Camp
 
-- 2019 (6/12)
+- [2019](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2019/JOISC2019.pdf)
   - [Day 1](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2019/Day1/JOISC2019Day1.pdf)
     - 시험 (examination)
     - 비버의 모임 (meetings)
@@ -31,7 +31,7 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
     - 특별관광도시 (designated)
     - 램프 (lamps)
     - 시간을 달리는 비타로 (timeleap)
-  - Day 4 (0/3)
+  - [Day 4](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2019/Day1/JOISC2019Day4.pdf)
     - Cake 3
     - Mergers
     - Minerals 
