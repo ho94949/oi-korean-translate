@@ -31,7 +31,7 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
     - 특별관광도시 (designated)
     - 램프 (lamps)
     - 시간을 달리는 비타로 (timeleap)
-  - [Day 4](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2019/Day1/JOISC2019Day4.pdf)
+  - [Day 4](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2019/Day4/JOISC2019Day4.pdf)
     - 케이크 3 (cake3)
     - 합병 (mergers)
     - 광물 (minerals) 
