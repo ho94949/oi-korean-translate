@@ -1,0 +1,120 @@
+\begin{problem}{항구 시설}
+	{standard input}{standard output}
+	{3.5 seconds}{1024 megabytes}{}
+	
+	JOI 항구에는 매일 많은 컨테이너들이 운반되어 오고, 전국 각지로 트럭을 통해 운반된다.
+	
+	JOI 항구는 매우 좁아서, 콘테이너를 넣을 수 있는 공간이 2개 밖에 없다. 각각의 공간에는 컨테이너를 수직으로 쌓아서 몇개든 넣을 수 있다.
+	
+	안전상의 이유로, 컨테이너가 항구에서 운반되어 오면 두 공간 중 하나에 컨테이너를 놓아야 한다. 만약 이미 컨테이너가 그 위치에 있으면, 이미 있는 컨테이너의 위에 새 컨테이너를 쌓는다. 트럭으로 운반 할 때는, 두 공간에 쌓인 컨테이너 중 가장 위에서 부터 차례대로 운반해야 한다.
+	
+	오늘, JOI 항구에는 $N$개의 컨테이너가 배로 운반 될 예정이다. 모든 컨테이너는 오늘 내로 트럭으로 운반될 예정이다.
+	
+	당신은 JOI 항구의 항구시설의 관리를 맡고 있어서, 모든 컨테이너가 배로 운반되는 시각과 트럭으로 운반되는 시간을 알고 있다. 컨테이너를 쌓고 가져가는 경우의 수를 1 000 000 007로 나눈 나머지를 구하여라.
+	
+	\InputFile
+
+다음 정보가 표준 입력으로 주어진다.
+
+\begin{itemize}
+	\item 첫째 줄에는 공백으로 쩡수 $N$이 주어진다. 이는 JOI 항구에 운반 될 컨테이너의 수이다.
+	\item 다음 $N$개의 줄의 $i$ 번째 ($1 \le i \le N$) 줄에는 공백으로 구분 된 두 정수 $A_i$, $B_i$가 주어진다. 이는 JOI 항구에 $i$ 번째 컨테이너가 시각 $A_i$에 와서 시각 $B_i$에 트럭으로 운반된다는 의미이다.
+\end{itemize}
+
+
+\OutputFile
+
+표준 출력으로 한 개의 줄을 출력하여라. 출력은 컨테이너를 쌓고 가져가는 경우의 수를 1 000 000 007로 나눈 나머지이다.
+
+\Constraints
+
+\begin{itemize}
+	
+	\item $1 \le N \le 1\ 000\ 000$.
+	\item $1 \le A_i \le 2N$ ($1 \le i \le N$).
+	\item $1 \le B_i \le 2N$ ($1 \le i \le N$).
+	\item $A_i < B_i$ ($1 \le i \le N$).
+	\item $2N$개의 정수 $A_1$, $\cdots$, $A_N$, $B_1$, $\cdots$, $B_N$은 서로 다르다.	
+\end{itemize}
+
+
+\SubtaskWithCost{1}{10}
+\begin{itemize}
+	\item $N \le 20$
+\end{itemize}
+
+\SubtaskWithCost{2}{12}
+\begin{itemize}
+	\item $N \le 2\ 000$
+\end{itemize}
+
+\SubtaskWithCost{3}{56}
+\begin{itemize}
+	\item $N \le 100\ 000$
+\end{itemize}
+
+
+\SubtaskWithCost{4}{22}
+
+추가 제한조건이 없다.
+
+\Examples
+
+\begin{example}
+	\exmp{
+		4
+		1 3
+		2 5
+		4 8
+		6 7
+	}{%
+		4
+	}%
+\end{example}
+
+컨테이너를 놓는 네 가지 방법이 있다. 각 공간을 A, B라고 하자. 다음 방법으로 컨테이너를 놓을 수 있다.
+
+\begin{itemize}
+	\item 1, 2, 3, 4번 컨테이너를 각각 A, B, A, A에 놓는다.
+	\item 1, 2, 3, 4번 컨테이너를 각각 A, B, A, B에 놓는다.
+	\item 1, 2, 3, 4번 컨테이너를 각각 B, A, B, A에 놓는다.
+	\item 1, 2, 3, 4번 컨테이너를 각각 B, A, B, B에 놓는다.
+\end{itemize}
+
+\begin{example}
+	\exmp{
+		3
+		1 4
+		2 5
+		3 6
+	}{%
+		0
+	}%
+	\exmp{
+	5
+	1 4
+	2 10
+	6 9
+	7 8
+	3 5
+}{%
+	8
+}%
+\exmp{
+8
+1 15
+2 5
+3 8
+4 6
+14 16
+7 9
+10 13
+11 12
+}{%
+16
+}%
+\end{example}
+
+
+\end{problem}
+
