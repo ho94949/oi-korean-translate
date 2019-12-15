@@ -36,6 +36,24 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
     - 합병 (mergers)
     - 광물 (minerals) 
 
+- [2019](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2017/JOISC2017.pdf) (3/12)
+  - [Day 1](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2017/Day1/JOISC2017Day1.pdf)
+    - 경작 (cultivation)
+    - 항구 시설 (port facility)
+    - 불꽃놀이 막대 (sparklers)
+  - Day 2 (0/3)
+    - arranging tickets
+    - broken device
+    - railway trip
+  - Day 3 (0/3)
+    - coach
+    - long mansion
+    - natural park
+  - Day 4 (0/3)
+    - abduction2
+    - city
+    - dragon2
+
 ## POI
 
 - [XXI OI (POI 2013-2014)](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/POI/XXI/OI21.pdf)
