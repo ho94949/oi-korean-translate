@@ -1,0 +1,40 @@
+\begin{problem}{목장에서 자신을 뽐내는 법}
+	{standingout.in}{standingout.out}
+	{}{256 megabytes}{}
+	
+	사람처럼 소도 자신이 고유하다는 감정을 좋아한다. 농부 존의 목장에 있는 소들은 모두 같은 종이고 매우 비슷하게 보이기 때문에, 이름으로 고유함을 측정하려고 한다.
+	
+	각 소의 이름의 서로 다른 부분문자열이 있다. 얘를 들면 ``\texttt{amy}"의 서로 다른 부분문자열은 \{\texttt{a}, \texttt{m}, \texttt{y}, \texttt{am}, \texttt{my}, \texttt{amy}\} 이고, ``\texttt{tommy}"의 서로 다른 부분문자열은 \{\texttt{t}, \texttt{o}, \texttt{m}, \texttt{y}, \texttt{to}, \texttt{om}, \texttt{mm}, \texttt{my}, \texttt{tom}, \texttt{omm}, \texttt{mmy}, \texttt{tomm}, \texttt{ommy}, \texttt{tommy}\}이다.
+	
+	소의 이름에는 ``고유함"가 있고, 이는 자신의 부분문자열 중 다른 소들과 겹치지 않는 것의 개수이다. 예를 들어, \texttt{amy}가 목장에 혼자 있는 소인 경우 고유함은 6이다. \texttt{tommy}가 목장에 혼자 있는 소인 경우 고유함은 15이다. 하지만 두 소가 같이 있는 경우, \texttt{amy}의 고유함은 3, \texttt{tommy}의 고유함은 11이다.
+	
+	목장에 있는 소들이 주어졌을 때, 각 소 이름의 고유함을 구하여라.
+	
+	\InputFile
+	
+	첫째 줄에는 $N$ ($1 \le N \le 10^5$)이 주어진다. 다음 $N$개의 각 줄에는 목장에 있는 소의 이름이 하나씩 주어진다. 각 이름은 영어 소문자 \texttt{a}부터 \texttt{z}까지 주어진다. 이름 길이의 합은 $10^5$를 넘지 않는다. 
+
+	\OutputFile
+	
+	$N$개의 줄에 한 줄에 하나씩 각 소 이름의 고유함을 출력하여라.
+	
+	\Examples
+		
+	\begin{example}
+	\exmp{
+3
+amy
+tommy
+bessie
+	}{%
+3
+11
+19
+	}%
+	\end{example}
+
+	
+	
+	
+\end{problem}
+
