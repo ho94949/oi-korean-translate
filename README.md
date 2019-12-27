@@ -36,7 +36,7 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
     - 합병 (mergers)
     - 광물 (minerals) 
 
-- 2017 (6/12)
+- 2017 (9/12)
   - [Day 1](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2017/Day1/JOISC2017Day1.pdf)
     - 경작 (cultivation)
     - 항구 시설 (port facility)
@@ -45,10 +45,10 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
     - 티켓 정리 (arranging tickets)
     - 고장난 기기 (broken device)
     - 철도 여행 (railway trip)
-  - Day 3 (0/3)
-    - coach
-    - long mansion
-    - natural park
+  - [Day 3](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2017/Day3/JOISC2017Day3.pdf)
+    - 장거리 버스 (coach)
+    - 긴 저택 (long mansion)
+    - 자연공원 (natural park)
   - Day 4 (0/3)
     - abduction2
     - city
@@ -157,3 +157,20 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
     - Meteors (met)
     - Sticks (pat)
     - Programming Contest (pro)
+
+
+
+## USACO
+
+### 2017-2018
+
+- 2017 December
+  - [Platinum](https://github.com/ho94949/oi-korean-translate/raw/master/USACO/2017Dec/Platinum/USACO17DecPla.pdf)
+    - 목장에서 자신을 뽐내는 법 (standingout)
+    - 상자 밀기 (pushabox)
+    - 욕심 많은 선물 가져가기 (greedy)
+- 2018 January
+  - [Platinum](https://github.com/ho94949/oi-korean-translate/raw/master/USACO/2018Jan/Platinum/USACO18JanPla.pdf)
+    - 구조원 (lifeguards)
+    - 황야의 소 (atlarge)
+    - 스프링클러 (sprinkler)
