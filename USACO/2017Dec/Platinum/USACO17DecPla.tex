@@ -16,6 +16,10 @@
 \usepackage{array} % compatibility check
 \usepackage{multirow}
 
+% https://tex.stackexchange.com/questions/207232/problem-with-inserting-the-symbols-times-and-omega-when-using-arabi-package
+\DeclareRobustCommand{\timesr}{\fontfamily{artimes}\selectfont}
+\let\times\relax
+\DeclareMathSymbol{\times}{\mathbin}{symbols}{"02}
 
 \contest
 {USACO 2017 12월 대회}%
