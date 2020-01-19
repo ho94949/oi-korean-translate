@@ -1,0 +1,68 @@
+\begin{problem}{정렬감이 없다}
+	{sort.in}{sort.out}
+	{2 seconds}{256 megabytes}{}
+	
+	농장 밖에서의 취직을 생각하던 베시는 최근 온라인 코딩 웹사이트에서 다양한 알고리즘을 배우기 시작했다. 가장 좋아하는 알고리즘은 ``버블 정렬"과 ``퀵 정렬"이다. 하지만 베시는 이 둘을 쉽게 헛갈려서, 둘을 섞은 이상한 알고리즘을 만들어냈다.
+	
+	$A[\cdots i]$의 최댓값이 $A[i+1 \cdots]$의 최솟값보다 크지 않을 경우에, $i$번째와 $i+1$번째 원소 사이의 위치를 ``분할점" 이라고 한다. 베시는 퀵 정렬이 배열을 재배열해서 분할점이 있도록 만들고, $A[\cdots i]$와 $A[i+1 \cdots]$ 사이를 재귀적으로 정렬한다는 것을 기억한다. 배열에서 모든 분할점을 찾는 것이 선형시간에 계산할 수 있지만, 퀵 정렬이 분할점을 만들기 위해서 어떻게 배열을 재배열하는지는 잊어버렸다! 이 일에 버블 정렬을 사용하는 알고리즘계의 최악의 실수라고 할 수 있는 결정을 하고 말았다.
+	
+	다음은 베시가 배열 \texttt{A}를 정렬하는 방법이다. 
+	
+	일단 처음에 버블 정렬의 한 단계를 진행하는 간단한 함수를 작성했다. (역자 주: \texttt{length(A)}는, 배열 \texttt{A}의 길이를 의미한다.) 
+	
+\begin{verbatim}
+  bubble_sort_pass (A) {
+      for i = 0 .. length(A)-2
+          if A[i] > A[i+1], A[i]와 A[i+1]의 값을 서로 바꾼다.
+  }
+\end{verbatim}
+
+	그리고 베시의 퀵(인것 같은) 정렬은, 다음과 같이 작성되어 있다.
+\begin{verbatim}
+  quickish_sort (A) {
+      if length(A) = 1, return
+      do { // 주 반복문
+          work_counter = work_counter + length(A)
+          bubble_sort_pass(A)
+      } while(A에 분할점이 존재하지 않을 때 까지)
+      A를 모든 분할점을 기준으로 나눈다. 각 조각에 대해 quickish_sort를 호출한다.
+  }
+\end{verbatim}
+
+	베시는 자신의 코드가 얼마나 빠르게 동작할지 궁금하다. 문제를 단순화 하기 위해서, 그는 주 반복문의 한 단계가 선형 시간 안에 동작하므로, 전역변수 \texttt{work\_counter}를 반복문 안에서 증가시켜서, 알고리즘이 동작하는데 걸리는 시간을 계산한다.
+	
+	주어진 배열에 대해서, \texttt{quickish\_sort}를 한 이후에 \texttt{work\_counter}의 값을 구하여라.
+	
+	\InputFile
+	
+	첫째 줄은 $N$ ($1 \le N \le 100,000$)이 주어진다. 다음 $N$개의 줄은 $0$이상 $10^9$이하의 정수 $A[0]$, $\cdots$, $A[N-1]$이 주어진다. 각 원소가 서로 다르다는 사실이 보장되어 있지 않다.
+	
+	\OutputFile
+	
+	\texttt{work\_counter}의 값을 출력하여라.
+	
+	\Constraints
+		
+	\begin{example}
+	\exmp{
+7
+20
+2
+3
+4
+9
+8
+7
+	}{%
+12
+	}%
+	\end{example}
+	
+	\Note
+	
+	이 예제에서, 우리는 배열 20 2 3 4 9 8 7로 시작한다. 버블정렬의 한 단계 이후에 (\texttt{work\_counter}에 7을 더한다.), 우리는 2 \textbar\ 3 \textbar\ 4 \textbar\ 9 8 7 \textbar\  20으로 배열이 분리 되었다는 것을 알 수 있다. (\textbar 은 분할점을 의미한다.) 이제 문제는 2, 3, 4, 20을 정렬하는 것과 (0만큼의 단위 시간이 든다.), 9 8 7을 정렬하는 것이다. 9 8 7 부분문제에 대해서, 주 반복문을 한 번 실행하면 (\texttt{work\_counter}에 3을 더한다.) (8 7 \textbar\  9) 가 되고, 마지막으로 8 7에 대해서 주 반복문을 한 번 실행하면 (\texttt{work\_counter}에 2를 더한다.) 배열이 정렬되었다는 것을 알 수 있다.
+	
+	
+	
+\end{problem}
+

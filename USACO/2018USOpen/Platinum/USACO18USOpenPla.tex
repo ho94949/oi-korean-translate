@@ -1,0 +1,45 @@
+\documentclass[11pt,a4paper,oneside,arabic,korean]{article}
+
+\usepackage{kotex}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{olymp}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb} 
+\usepackage{color} % for colored text
+\usepackage{import} % for changing current dir
+\usepackage{epigraph}
+\usepackage{daytime} % for displaying version number and date
+\usepackage{wrapfig} % for having text alongside pictures
+\usepackage{verbatim}
+\usepackage{array} % compatibility check
+\usepackage{multirow}
+
+%\usepackage{hyperref}
+
+% https://tex.stackexchange.com/questions/207232/problem-with-inserting-the-symbols-times-and-omega-when-using-arabi-package
+\DeclareRobustCommand{\timesr}{\fontfamily{artimes}\selectfont}
+\let\times\relax
+\DeclareMathSymbol{\times}{\mathbin}{symbols}{"02}
+
+\contest
+{USACO 2018 US Open}%
+{Platinum}%
+{2018년 3월 23-26일}%
+
+\binoppenalty=10000
+\relpenalty=10000
+\exhyphenpenalty=10000
+
+\begin{document}
+	
+	%\raggedbottom
+	%\displayauthorinfootertrue
+	%\intentionallyblankpagestrue
+	
+	
+	\import{./sort/}{sort.tex}
+	\import{./train/}{train.tex}
+	\import{./disrupt/}{disrupt.tex}
+\end{document}
