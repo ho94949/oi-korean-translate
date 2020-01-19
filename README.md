@@ -174,3 +174,13 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
     - 구조원 (lifeguards)
     - 황야의 소 (atlarge)
     - 스프링클러 (sprinkler)
+- 2018 February
+  - [Platinum](https://github.com/ho94949/oi-korean-translate/raw/master/USACO/2018Feb/Platinum/USACO18FebPla.pdf)
+    - 고무총 (slingshot)
+    - 새 헛간 (newbarn)
+    - 소 체조선수 (gymnasts)
+- 2018 US Open
+  - [Platinum](https://github.com/ho94949/oi-korean-translate/raw/master/USACO/2018USOpen/Platinum/USACO18USOpenPla.pdf)
+    - 정렬감이 없다 (sort)
+    - 열차 추적 (train)
+    - 붕괴 (disrupt)
