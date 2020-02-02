@@ -184,3 +184,12 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
     - 정렬감이 없다 (sort)
     - 열차 추적 (train)
     - 붕괴 (disrupt)
+
+
+### 2018-2019
+
+- 2018 December
+  - [Platinum](https://github.com/ho94949/oi-korean-translate/raw/master/USACO/2018Dec/Platinum/USACO18DecPla.pdf)
+    - 저울대 (balance)
+    - 정리하자 (itout)
+    - 소 모임 (gathering)
