@@ -1,0 +1,131 @@
+\begin{problem}{도서관}
+	{standard input}{standard output}
+	{2 second}{256 megabytes}{}
+	
+	수백년의 시간이 지난 끝에, JOI도시는 폐허가 되었다. 탐험가 IOI양은, 도서관이 있었던 지역을 조사하고 있다. 조사를 하면, 다음과 같은 것들을 알 수 있다.
+	
+	\begin{itemize}
+		\item JOI시의 도서관 서재에는 $N$ 권의 책이 있었다. $N$ 권의 책은 책장에 왼쪽에서 오른쪽으로 일렬로 놓여 있었다.
+		\item $N$ 권의 책은 1번 부터 $N$번 까지의 번호가 붙어있다. 하지만 책장에 꽂힌 순서와 번호가 붙은 순서는 다를 수도 있다.
+		\item 작업 한번으로, 책장에서 연속으로 놓여진 책을 가져갈 수 있었다.
+	\end{itemize}
+
+	유감스럽게, IOI양은 도서관에서 오래된 책을 찾는 데에 실패했다. 하지만, 도서관의 작업을 담당하는 기계를 찾았다. 한 개 이상의 책 번호를 기계한테 물어볼 경우, 기계는 이 책들을 가져가기 위해서 필요한 작업의 최소횟수를 답해주었다.
+	
+	IOI양은 기계한테 질문을 하면서 책이 위치한 순서를 알고 싶어한다. 단, $N$개의 책이 역순으로 놓여있는 경우에도 답은 변하지 않으므로, 왼쪽에서 오른쪽인지, 오른쪽에서 왼쪽인지의 방향은 신경쓰지 않는다.
+	
+	기계가 오래되었기 때문에, 최대 20 000번의 질문만 할 수 있다.
+	
+	\Specification
+	
+	당신은 파일 하나를 제출해야 한다.
+	
+	이 파일의 이름은 \texttt{library.cpp}이다. 파일은 다음 함수를 구현해야 한다. 또한, \texttt{library.h}를 include해야 한다.
+	
+	\begin{itemize}
+		\item \texttt{void Solve(int N)}
+		
+		이 함수는 각 테스트 케이스 마다 정확히 한 번 불린다.
+		\begin{itemize}
+			\item 인자 \texttt{N}은 책의 수 $N$을 나타낸다.
+		\end{itemize}
+		
+		당신의 프로그램은 다음 함수를 호출 할 수 있다.
+		\begin{itemize}
+			\item \texttt{int Query(const std::vector<int>\& M)}
+			
+			한 개 이상의 책 번호를 기계한테 물어볼 경우, 이 함수는 책들을 가져가기 위해서 필요한 작업의 최소횟수를 반환한다.
+			
+			\begin{itemize}
+				\item 가져갈 책의 번호들은 인자 \texttt{M}으로 표시되며, 이는 크기 $N$의 `vector`이다. 각 $i$ ($1 \le i \le N$) 에 대해, \texttt{M[}$i$\texttt{-1]}$=0$인 경우, $i$ 번째 책은 가져가지 않는다. \texttt{M[}$i$\texttt{-1]}$=1$인 경우, $i$ 번째 책은 가져간다. 만약 \texttt{M}의 크기가 $N$과 다를 경우 \textbf{오답 [1]}이 된다. 각 $i$에 대해, \texttt{M[}$i$\texttt{-1]}은 0 혹은 1이어야 한다. \texttt{M[}$i$\texttt{-1]}$=1$인 $i$가 ($1 \le i \le N$) 적어도 한 개는 존재해야 한다. 이 두 조건을 만족하지 않을 경우 \textbf{오답 [2]}이 된다. \texttt{Query}를 20 000번 초과로 호출할 경우, \textbf{오답 [3]}이 된다.
+			\end{itemize}
+			
+			\item \texttt{void Answer(const std::vector<int\& res)}
+			
+			이 함수를 이용하여, 책꽂이에 꽂힌 책의 순서를 답할 수 있다. 책이 왼쪽에서 오른쪽인지, 오른쪽에서 왼쪽인지의 방향은 신경쓰지 않는다.
+			
+			\begin{itemize}
+				\item 인자 \texttt{res}는 크기 $N$의 `vector`이다. 이는 책꽂이에 꽂혀있는 책의 순서를 나타낸다. 각 $i$ ($1 \le i \le N$) 에 대해 책꽂이에 왼쪽에서 $i$ 번째로 꽂혀있는 책의 번호는 \texttt{res[}$i$\texttt{-1]}이다. 만약 \texttt{res}의 크기가 $N$과 다를 경우, \textbf{오답 [4]}이 된다. 만약 \texttt{res[}$i$\texttt{-1]}는 1 이상 $N$ 이하의 수여야 한다. 만약 이를 만족하지 않을 경우, \textbf{오답 [5]}이 된다. 또한, 수 \texttt{res[0]}, \texttt{res[1]}, \texttt{res[}$N$\texttt{-1]}은 모두 달라야 한다. 만약 이를 만족하지 않을 경우, \textbf{오답 [6]}이 된다.
+			\end{itemize}
+			
+			\texttt{Solve}함수가 종료될 때, \texttt{Answer}함수를 호출한 횟수가 한 번이 아니면, \textbf{오답 [7]}이 된다.
+			만약 \texttt{Solve}로 주어진 책의 순서가 책장에 꽂힌 순서와 다르면 \textbf{오답 [8]}이 된다. 왼쪽에서 오른쪽인지, 오른쪽에서 왼쪽인지의 방향은 신경쓰지 않는다.
+		\end{itemize}
+		
+	\end{itemize}
+	
+	\Notes
+	
+	\begin{itemize}
+		\item 당신의 프로그램은 내부에서 사용할 목적으로 함수나 전역변수를 사용할 수 있다.
+		\item 당신의 프로그램은 표준 입출력을 사용해서는 안된다. 당신의 프로그램은 어떠한 방법으로도 다른 파일에 접근해서는 안된다. 단, 당신의 프로그램은 디버그 목적으로 표준 에러출력에 출력할 수 있다.
+	\end{itemize}
+	
+	당신은 대회 홈페이지의 아카이브에서 프로그램을 테스트 하기 위한 목적의 샘플 그레이더를 받을 수 있다. 아카이브는 당신의 프로그램의 예제 소스 또한 첨부되어 있다.
+	샘플 그레이더는 파일 \texttt{grader.cpp}이다. 당신의 프로그램을 테스트 하기 위해서, \texttt{grader.cpp}, \texttt{library.cpp}, \texttt{library.h}를 같은 디렉토리 안에 놓고, 컴파일 하기 위해 다음 커맨드를 실행하여라.
+	
+	\begin{itemize}
+		\item \texttt{g++ -std=c++14 -O2 -o grader grader.cpp library.cpp}
+	\end{itemize}
+	
+	컴파일이 성공적이면, 파일 \texttt{grader}가 생성된다.
+	
+	실제 그레이더와 샘플 그레이더는 다름에 주의하여라. 샘플 그레이더는 하나의 프로세스에서 실행 되며, 입력을 표준 입력으로 부터 받고, 출력을 표준 출력에 출력한다.
+	
+	\InputFile
+	
+	샘플 그레이더는 표준 입력에서 다음과 같은 형식으로 입력받는다.
+	
+	\begin{itemize}
+		\item 첫째 줄에는 정수 $N$이 주어진다. 이는 책꽂이에 책이 $N$ 권 있다는 의미이다.
+		\item 다음 $N$개의 줄의 $i$ 번째 ($1 \le i \le N$) 줄에는 정수 $A_i$가 주어진다. 이는 왼쪽에서 $i$ 번째 꽂힌 책의 번호가 $A_i$ 임을 의미한다.
+	\end{itemize}
+
+	\OutputFile
+	
+	프로그램이 정상적으로 종료되었다면, 샘플 그레이더는 다음과 같은 정보를 표준 출력에 출력한다. (따옴표는 출력하지 않는다.)
+	
+	\begin{itemize}
+		\item 정답으로 판단 된 경우, \texttt{Query}함수의 호출 횟수를 ``\texttt{Accepted: 100}"과 같은 형식으로 출력한다.
+		\item 오답으로 판단 된 경우, 오답의 종류를 ``\texttt{Wrong Answer [1]}"과 같은 형식으로 출력한다.
+	\end{itemize}
+	
+	프로그램이 다양한 오답의 종류에 속해 있을 경우, 샘플 그레이더는 그 중 하나만 출력 할 것이다.
+	
+	\Constraints
+	
+	모든 입력 데이터는 다음의 조건을 만족한다. $N$과 $A_i$의 의미는, 입력 형식을 참고하여라.
+	
+	\begin{itemize}
+		\item $1 \le N \le 1\ 000$.
+		\item $1 \le A_i \le N$ ($1 \le i \le N$).
+		\item $1 \le A_i \ne A_j \le N$ ($1 \le i < j \le N$).
+	\end{itemize}
+	
+	\SubtaskWithCost{1}{19}
+	\begin{itemize}
+		\item $N \le 200$.
+	\end{itemize}
+	
+	\SubtaskWithCost{2}{81}
+	
+	추가 제한조건이 없다.
+	
+	\Examples
+	
+	이 함수는 그레이더의 예제 입력과 해당하는 함수 호출을 보여준다.
+	
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		\multirow{2}{*}{예제 입력}                                                             & \multicolumn{3}{l|}{예제 함수 호출}    \\ \cline{2-4} 
+		& 호출       & 호출             & 반환값  \\ \hline
+		\multirow{6}{*}{\begin{tabular}[c]{@{}l@{}}\texttt{5}\\ \texttt{4}\\ \texttt{2}\\ \texttt{5}\\ \texttt{3}\\ \texttt{1}\end{tabular}} & \texttt{Solve(5)} &                &      \\ \cline{2-4} 
+		&          & \texttt{Query(\{1,1,1,0,0\})} &     \\ \cline{2-4} 
+		&          &  & 2    \\ \cline{2-4} 
+		&          & \texttt{Answer(\{4,2,5,3,1\})} &     \\ \cline{2-4} 
+		&          &  & (없음)    \\ \cline{2-4} 
+		&          &  &  \\ \hline
+	\end{tabular}
+
+이 문제에서, 책이 놓인 방향이 왼쪽에서 오른쪽인지, 오른쪽에서 왼쪽인지의 방향은 신경쓰지 않는다. 그렇기 때문에, 배열을 거꾸로 쓴 \texttt{Answer(\{1,3,5,2,4\})}를 호출하여도 정답이다.
+\end{problem}

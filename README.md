@@ -34,7 +34,13 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
   - [Day 4](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2019/Day4/JOISC2019Day4.pdf)
     - 케이크 3 (cake3)
     - 합병 (mergers)
-    - 광물 (minerals) 
+    - 광물 (minerals)
+
+- 2018
+  - [Day 4](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2018/Day4/JOISC2018Day4.pdf)
+    - 사탕 (candies)
+    - 도서관 (library)
+    - 멧돼지 (wild boar) 
 
 - [2017](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2017/JOISC2017.pdf)
   - [Day 1](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2017/Day1/JOISC2017Day1.pdf)
@@ -162,6 +168,14 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
 
 ## USACO
 
+### 2018-2019
+
+- 2018 December
+  - [Platinum](https://github.com/ho94949/oi-korean-translate/raw/master/USACO/2018Dec/Platinum/USACO18DecPla.pdf)
+    - 저울대 (balance)
+    - 정리하자 (itout)
+    - 소 모임 (gathering)
+
 ### 2017-2018
 
 - 2017 December
@@ -185,11 +199,11 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
     - 열차 추적 (train)
     - 붕괴 (disrupt)
 
+### 2016-2017
 
-### 2018-2019
+- 2016 December
+  - [Platinum](https://github.com/ho94949/oi-korean-translate/raw/master/USACO/2016Dec/Platinum/USACO16DecPla.pdf)
+    - 삼각형 공터 (triangles)
+    - 팀 짜기 (team)
+    - 로봇 소떼 (roboherd)
 
-- 2018 December
-  - [Platinum](https://github.com/ho94949/oi-korean-translate/raw/master/USACO/2018Dec/Platinum/USACO18DecPla.pdf)
-    - 저울대 (balance)
-    - 정리하자 (itout)
-    - 소 모임 (gathering)
