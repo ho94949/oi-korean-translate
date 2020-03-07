@@ -35,8 +35,11 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
     - 케이크 3 (cake3)
     - 합병 (mergers)
     - 광물 (minerals)
-
 - 2018
+  - [Day 3](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2018/Day3/JOISC2018Day3.pdf)
+    - 항공노선도 (airline)
+    - 비타로의 파티 (bitaro)
+    - 보안 게이트 (security gate) 
   - [Day 4](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2018/Day4/JOISC2018Day4.pdf)
     - 사탕 (candies)
     - 도서관 (library)
