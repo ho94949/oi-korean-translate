@@ -18,6 +18,21 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
 
 ### JOI Spring Camp
 
+
+- 2020
+  - [Day 1](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2020/Day1/JOISC2020Day1.pdf)
+    - 건물 4 (building4)
+    - 함박 스테이크 (hamburg)
+    - 청소 (sweeping)
+  - [Day 2](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2020/Day2/JOISC2020Day2.pdf)
+    - 카멜레온의 사랑 (chameleon)
+    - 조이터에서 친구를 만드는건 재밌어 (joitter2)
+    - 유적 3 (ruins3)
+  - [Day 3](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2020/Day3/JOISC2020Day3.pdf)
+    - 별자리 3 (constellation3)
+    - 수확 (harvest)
+    - 길고양이 (stray)
+
 - [2019](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2019/JOISC2019.pdf)
   - [Day 1](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2019/Day1/JOISC2019Day1.pdf)
     - 시험 (examination)
