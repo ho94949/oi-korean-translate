@@ -19,7 +19,7 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
 ### JOI Spring Camp
 
 
-- 2020
+- [2020](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2020/JOISC2020.pdf)
   - [Day 1](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2020/Day1/JOISC2020Day1.pdf)
     - 건물 4 (building4)
     - 함박 스테이크 (hamburg)
@@ -32,6 +32,10 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
     - 별자리 3 (constellation3)
     - 수확 (harvest)
     - 길고양이 (stray)
+  - [Day 4](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2020/Day4/JOISC2020Day4.pdf)
+    - 수도 (capital city)
+    - 전설의 경단 요리사 (dango2)
+    - 치료 계획 (treatment)
 
 - [2019](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2019/JOISC2019.pdf)
   - [Day 1](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2019/Day1/JOISC2019Day1.pdf)
