@@ -2,7 +2,7 @@
 	{}{}
 	{2 second}{512 megabytes}{}
 	
-	JOI 동물원에는 $2N$ 마리의 카멜레온이 있고 $1$부터 $2N$까지의 번호가 붙어있다. 그 중, $N$ 마리의 카멜레온은 성별이 X이다. 다른 $N$ 마리의 카멜레온은 성별이 Y이다.
+	JOI 동물원에는 $1$번부터 $2N$번까지의 번호가 붙어있는 $2N$ 마리의 카멜레온이 있다. 그 중, $N$ 마리의 카멜레온은 성별이 X이다. 다른 $N$ 마리의 카멜레온은 성별이 Y이다.
 	
 	각 카멜레온에는 \textbf{원본 색}이 있다. 카멜레온의 원본 색에 대해서는 다음과 같은 사실이 알려져 있다.
 	
@@ -15,7 +15,7 @@
 	
 	\begin{itemize}
 		\item 각 카멜레온은 성별이 자신과 다른 카멜레온을 정확히 한 마리 사랑한다.
-		\item 어떤 카멜레온과 그 카멜레온이 사랑하는 카멜레온의 색은 다르다.
+		\item 어떤 카멜레온과 그 카멜레온이 사랑하는 카멜레온의 원본 색은 다르다.
 		\item 같은 카멜레온을 사랑하는 서로 다른 두 카멜레온은 존재하지 않는다.
 	\end{itemize}
 
@@ -57,7 +57,7 @@
 				\item 이 함수의 반환값은 미팅에 참석한 카멜레온의 피부색이 몇 종류인지이다.
 				\item \texttt{p}에 있는 각 원소는 1 이상 $2N$ 이하의 정수여야 한다. 이를 만족하지 않은 경우에는 \textbf{오답 [1]}이 된다.
 				\item \texttt{p}에 있는 각 원소는 서로 달라야 한다. 이를 만족하지 않은 경우에는 \textbf{오답 [2]}이 된다.
-				\item 당신은 이 함수를 20 000번 이상 호출해서는 안된다. 이를 만족하지 않은 경우에는 \textbf{오답 [3]}이 된다.
+				\item 당신은 이 함수를 20 000번 이상 호출해서는 안 된다. 이를 만족하지 않은 경우에는 \textbf{오답 [3]}이 된다.
 			\end{itemize}
 			
 			\item \texttt{void Answer(int a, int b)}
@@ -70,7 +70,7 @@
 				\item $a$와 $b$로 주어진 수는 2번 이상 나타나서는 안 된다. 이를 만족하지 않은 경우에는 \textbf{오답 [5]}이 된다.
 				\item 서로 원본 색을 가진 카멜레온을 지정할 경우 \textbf{오답 [6]}이 된다.
 				\item 
-				함수 \text{Answer}는 정확히 $N$번 호출될 필요가 있다. 함수 \texttt{Solve}의 실행 종료 시에 함수 \texttt{Answer}의 호출 횟수가 $N$번이 아닐 경우 \textbf{오답 [7]}이 된다.
+				함수 \texttt{Answer}는 정확히 $N$번 호출될 필요가 있다. 함수 \texttt{Solve}의 실행 종료 시에 함수 \texttt{Answer}의 호출 횟수가 $N$번이 아닐 경우 \textbf{오답 [7]}이 된다.
 			\end{itemize}
 			
 		\end{itemize}
@@ -85,7 +85,7 @@
 	\end{itemize}
 	
 	당신은 대회 홈페이지의 아카이브에서 프로그램을 테스트하기 위한 목적의 샘플 그레이더를 받을 수 있다. 아카이브는 당신의 프로그램의 예제 소스 또한 첨부되어 있다.
-	샘플 그레이더는 파일 \texttt{grader.cpp}이다. 당신의 프로그램을 테스트 하기 위해서, \texttt{grader.cpp}, \texttt{chameleon.cpp}, \texttt{chameleon.h}를 같은 디렉토리 안에 놓고, 컴파일 하기 위해 다음 커맨드를 실행하여라.
+	샘플 그레이더는 파일 \texttt{grader.cpp}이다. 당신의 프로그램을 테스트 하기 위해서, \texttt{grader.cpp}, \texttt{chameleon.cpp}, \texttt{chameleon.h}를 같은 디렉토리 안에 놓고, 컴파일하기 위해 다음 커맨드를 실행하여라.
 	
 	\begin{itemize}
 		\item \texttt{g++ -std=gnu++14 -O2 -o grader grader.cpp chameleon.cpp}
@@ -113,8 +113,6 @@
 	$C_i$는 ($1 \le i \le 2N$) $i$ 번째 카멜레온의 원본 색을 나타내고, 1 이상 $N$ 이하의 정수이다.
 	
 	$L_i$는 ($1 \le i \le 2N$) $i$ 번째 카멜레온이 사랑하는 카멜레온의 번호이다.
-	
-	$X_i$와 $Y_i$ ($0 \le i \le N-2$)는 $X_i$번 조각과 $Y_i$번 조각이 같은 종류의 광물임을 의미한다.
 	
 	\OutputFile
 	
