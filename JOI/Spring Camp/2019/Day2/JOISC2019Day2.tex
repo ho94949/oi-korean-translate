@@ -16,11 +16,15 @@
 \usepackage{array} % compatibility check
 \usepackage{multirow}
 
+% https://tex.stackexchange.com/questions/207232/problem-with-inserting-the-symbols-times-and-omega-when-using-arabi-package
+\DeclareRobustCommand{\timesr}{\fontfamily{artimes}\selectfont}
+\let\times\relax
+\DeclareMathSymbol{\times}{\mathbin}{symbols}{"02}
 
 \contest
 {제 18회 일본 정보올림피아드 (JOI 2018/2019)}%
-{여름 캠프 / 선발 고사 Day 2}%
-{2019년 3월 19-25일, (도쿄 코마바, 요요기)}%
+{봄 캠프 / 선발 고사 Day 2}%
+{2019년 3월 19--25일, (도쿄 코마바, 요요기)}%
 
 \binoppenalty=10000
 \relpenalty=10000
