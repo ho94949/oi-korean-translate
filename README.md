@@ -1,7 +1,7 @@
 # oi-korean-translate
 다양한 올림피아드를 한국어로 번역합니다.
 
-LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만들어 졌고, 저장소에 있는 [olymp.sty](https://github.com/ho94949/oi-korean-translate/blob/master/olymp.sty)는 한국어로 번역된 버전이 들어있습니다.
+LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만들어졌고, 저장소에 있는 [olymp.sty](https://github.com/ho94949/oi-korean-translate/blob/master/olymp.sty)는 한국어로 번역된 버전이 들어있습니다.
 
 **이 문제는 제가 소유권을 가지고 있는 문제들이 아닙니다.**
 
@@ -56,7 +56,7 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
     - 광물 (minerals)
 - 2018
   - [Day 3](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2018/Day3/JOISC2018Day3.pdf)
-    - 항공노선도 (airline)
+    - 항공 노선도 (airline)
     - 비타로의 파티 (bitaro)
     - 보안 게이트 (security gate) 
   - [Day 4](https://raw.githubusercontent.com/ho94949/oi-korean-translate/master/JOI/Spring%20Camp/2018/Day4/JOISC2018Day4.pdf)
@@ -189,6 +189,15 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
 
 
 ## USACO
+
+### 2019-2020
+
+- 2020 US Open
+  - [Platinum](https://github.com/ho94949/oi-korean-translate/raw/master/USACO/2020USOpen/Platinum/USACO20USOpenPla.pdf)
+    - 스프링클러 2: 알팔파의 귀환 (sprinkler2)
+    - 운동 (exercise)
+    - 서커스 (circus)
+
 
 ### 2018-2019
 

@@ -1,0 +1,97 @@
+\begin{problem}{운동}
+	{exercise.in}{exercise.out}
+	{2초}{512MB}{}
+	
+	
+	농부 존은 소를 위한 아침 운동 계획을 (또) 생각해 냈다!
+	
+	전과 같이 농부 존의 $N$ 마리 ($1 \le N \le 7500$) 소는 일렬로 서 있다. $1 \le i \le N$을 만족하는 $i$에 대해, 왼쪽에서 $i$ 번째 소에는 번호 $i$번이 붙어있다. 농부 존은 소에게 다음 단계를 처음 상태와 같아질 때까지 반복하라고 시킨다.
+	
+	\begin{itemize}
+		\item 길이 $N$의 순열 $A$에 대해, 왼쪽에서 $i$ 번째에 있었던 소가 왼쪽에서 $A_i$ 번째로 이동한다. 
+	\end{itemize}
+
+	예를 들어 $A = (1, 2, 3, 4, 5)$인 경우에는 소는 정확히 한 단계를 실행하고 처음 상태로 돌아온다. $A = (2, 3, 1, 5, 4)$인 경우에는, 소는 정확히 여섯 단계를 실행하고 처음으로 돌아온다. 각 단계에서 소의 번호는 다음과 같다.
+	
+	\begin{itemize}
+		\item 0번째 단계: $(1, 2, 3, 4, 5)$
+		\item 1번째 단계: $(3, 1, 2, 5, 4)$
+		\item 2번째 단계: $(2, 3, 1, 4, 5)$
+		\item 3번째 단계: $(1, 2, 3, 5, 4)$
+		\item 4번째 단계: $(3, 1, 2, 4, 5)$
+		\item 5번째 단계: $(2, 3, 1, 5, 4)$
+		\item 6번째 단계: $(1, 2, 3, 4, 5)$
+	\end{itemize}
+
+	길이 $N$의 순열 $A$로 가능한 $N!$ 가지에 대해 운동 단계가 몇 단계인지를 모두 곱한 값을 계산하여라.
+	
+	수가 매우 클 수 있기 때문에 답을 $M$으로 ($10^8 \le M \le 10^9+7$, $M$은 소수) 나눈 나머지를 출력하여라.
+	
+	C++을 사용하는 참가자는 KACTL에 있는 Barrett Reduction으로 알려진 코드를 유용하게 사용 할 수도 있다. $b>1$이 상수이지만 컴파일 타임에 알려지지 않은 경우, $a\%b$ 연산을 평소보다 몇 배 빠르게 할 수 있다. (유감스럽지만 Java에 대해서는 이런 최적화를 고려하고 있지는 않다.)
+	
+	\begin{verbatim}
+	#include <bits/stdc++.h>
+	using namespace std;
+	
+	typedef unsigned long long ull;
+	typedef __uint128_t L;
+	struct FastMod {
+	        ull b, m;
+	        FastMod(ull b) : b(b), m(ull((L(1) << 64) / b)) {}
+	        ull reduce(ull a) {
+	                ull q = (ull)((L(m) * a) >> 64);
+	                ull r = a - q * b; // can be proven that 0 <= r < 2*b
+	                return r >= b ? r - b : r;
+	        }
+	};
+	FastMod F(2);
+	
+	int main() {
+	        int M = 1000000007; F = FastMod(M);
+	        ull x = 10ULL*M+3; 
+	        cout << x << " " << F.reduce(x) << "\n"; // 10000000073 3
+	}
+
+	\end{verbatim}
+	
+	
+	\InputFile
+	
+	첫째 줄에 $N$과 $M$이 주어진다.
+	
+	\OutputFile
+	
+	답을 출력하여라.
+	
+	
+	\Example
+		
+	\begin{example}
+	\exmp{
+5 1000000007
+	}{%
+369329541
+	}%
+	\end{example}
+	
+	$1 \le i \le N$를 만족하는 각 $i$에 대해, 다음 배열의 $i$ 번째 원소는 소가 $i$단계를 실행하면 원래 위치로 돌아온다는 것을 의미한다. $[1, 25, 20, 30, 24, 20]$. 답은 $1^1 \cdot 2^{25} \cdot 3^{20} \cdot 4^{30} \cdot 5^{24} \cdot 6^{20} \equiv 369329541 \pmod{10^9+7}$ 이다.
+	
+	\Note
+	
+	이 문제의 메모리 제한은 512MB이다.
+	
+	\Scoring
+	
+	\begin{itemize}
+		\item 2번 테스트 케이스는 $N = 8$을 만족한다.
+		\item 3--5번 테스트 케이스는 $N \le 50$을 만족한다.
+		\item 6--8번 테스트 케이스는 $N \le 500$을 만족한다.
+		\item 9--12번 테스트 케이스는 $N \le 3000$을 만족한다.
+		\item 13--16번 테스트 케이스는 추가 제한조건이 없다.
+	\end{itemize}
+	
+	
+	
+	
+\end{problem}
+
