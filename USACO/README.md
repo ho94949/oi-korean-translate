@@ -2,7 +2,6 @@
 
 ## 2019-2020
 
-
 - 2020 February
   - [Platinum](https://github.com/ho94949/oi-korean-translate/raw/master/USACO/2020Feb/Platinum/USACO20FebPla.pdf)
     - 대표단 (deleg)
