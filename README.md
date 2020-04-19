@@ -192,6 +192,13 @@ LaTeX와 [olymp.sty](https://github.com/GassaFM/olymp.sty)를 기반으로 만�
 
 ### 2019-2020
 
+
+- 2020 February
+  - [Platinum](https://github.com/ho94949/oi-korean-translate/raw/master/USACO/2020Feb/Platinum/USACO20FebPla.pdf)
+    - 대표단 (deleg)
+    - 등변삼각형 (triangles)
+    - 혼자 해결하자 (help)
+
 - 2020 US Open
   - [Platinum](https://github.com/ho94949/oi-korean-translate/raw/master/USACO/2020USOpen/Platinum/USACO20USOpenPla.pdf)
     - 스프링클러 2: 알팔파의 귀환 (sprinkler2)
