@@ -1,0 +1,105 @@
+\begin{problem}{JJOOII 2}
+	{standard input}{standard output}
+	{2초}{256MB}{}
+	
+	비타로는 비바코에게 생일 선물로 \texttt{J}, \texttt{O}, \texttt{I} 세 종류의 문자로 이루어진 길이 $N$의 문자열 $S$를 받았다.
+	
+	$K$를 1 이상의 정수라고 하자. $K$ 개의 문자 \texttt{J}, $K$ 개의 문자 \texttt{O}, $K$ 개의 문자 \texttt{I}를 차례로 나열한 문자열을 레벨 $K$의 \textbf{JOI 문자열}이라고 부른다. 예를 들어, \texttt{JJOOII}는 레벨 2의 JOI 문자열이다.
+	
+	비타로는 레벨 $K$의 JOI 문자열을 좋아하므로 다음 세 종류의 조작을 원하는 순서로 원하는 만큼 해서 문자열 $S$를 레벨 $K$의 JOI 문자열로 바꾸려 한다.
+	
+	\begin{itemize}
+		\item[조작 1] 문자열 $S$의 가장 앞에 있는 문자를 지운다.
+		\item[조작 2] 문자열 $S$의 가장 뒤에 있는 문자를 지운다.
+		\item[조작 3] 문자열 $S$의 가장 앞에도 뒤에도 있지 않은 문자를 지운다.
+	\end{itemize}
+
+	조작 3이 제일 귀찮기 때문에, 조작 3을 하는 횟수를 최소한으로 하여 문자열 $S$를 레벨 $K$의 JOI 문자열로 바꾸고 싶다.
+	
+	길이 $N$의 문자열 $S$와 1 이상의 정수 $K$가 주어질 때, 문자열 $S$를 레벨 $K$의 JOI 문자열로 바꾸는 데에 필요한 조작 3의 횟수의 최솟값을 출력하는 프로그램을 작성하여라. 단, 어떻게 조작해도 문자열 $S$를 레벨 $K$ JOI 문자열로 만드는 것이 불가능할 때에는, 대신 \texttt{-1}을 출력하여라.
+	
+	
+	\InputFile
+	
+	표준 입력에서 다음과 같은 형식으로 주어진다.
+
+	$N$ $K$
+	
+	$S$
+	
+	\OutputFile
+	
+	문자열 $S$를 레벨 $K$의 JOI 문자열로 바꾸는 데에 필요한 조작 3의 횟수의 최솟값을 출력하는 프로그램을 작성하여라. 단, 어떻게 조작해도 문자열 $S$를 레벨 $K$ JOI 문자열로 만드는 것이 불가능할 때에는, 대신 \texttt{-1}을 출력하여라.
+	
+	
+	\Constraints
+	
+	\begin{itemize}
+	\item $3 \le N \le 200\ 000$.
+	\item $1 \le K \le \dfrac{N}{3}$.
+	\item $S$는 \texttt{J}, \texttt{O}, \texttt{I} 세 종류의 문자로 이루어진 길이 $N$의 문자열이다.
+	\end{itemize}
+	
+	
+	\SubtaskWithCost{1}{1}
+	\begin{itemize}
+		\item $N \le 21$.
+	\end{itemize}
+
+	\SubtaskWithCost{2}{12}
+	\begin{itemize}
+		\item $N \le 3\ 000$.
+	\end{itemize}
+	
+	\SubtaskWithCost{3}{87}
+	
+	추가 제한조건이 없다.
+	
+	\Examples
+		
+	\begin{example}
+	\exmp{
+	10 2
+	OJIJOIOIIJ
+		}{%
+	2
+		}%
+	\end{example}
+
+	다음과 같은 조작을 통해 문자열 $S$를 레벨 $K$의 JOI 문자열로 바꿀 수 있다.
+	
+	\begin{enumerate}
+		\item 처음에 조작 1을 한다. 문자열 $S$는 \texttt{JIJOIOIIJ}가 된다.
+		\item 다음에 조작 2를 한다. 문자열 $S$는 \texttt{JIJOIOII}가 된다.
+		\item 다음에 조작 3을 한다. 앞에서부터 두 번째 문자를 지운다. 문자열 $S$는 \texttt{JJOIOII}가 된다.
+		\item 다음에 조작 4를 한다. 앞에서부터 네 번째 문자를 지운다. 문자열 $S$는 \texttt{JJOOII}가 된다.
+	\end{enumerate}
+
+	두 번 미만으로 조작 3을 해서 문자열을 바꾸는 것은 불가능하기 때문에 2를 출력한다.
+	
+
+	\begin{example}
+	\exmp{
+		9 3
+		JJJOOOIII
+	}{%
+		0
+	}%
+	\end{example}
+
+	조작을 할 필요가 없다.
+
+	\begin{example}
+		\exmp{
+			9 3
+			IIIOOOJJJ
+		}{%
+			-1
+		}%
+	\end{example}
+
+	이 입력 예제에서는, 어떻게 조작을 해도 문자열 $S$를 레벨 1의 JOI 문자열로 바꿀 수 없다.
+	
+
+\end{problem}
+
