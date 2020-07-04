@@ -1,0 +1,50 @@
+\documentclass[11pt,a4paper,oneside,arabic,korean]{article}
+
+\usepackage{kotex}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{olymp}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color} % for colored text
+\usepackage{import} % for changing current dir
+\usepackage{epigraph}
+\usepackage{wrapfig} % for having text alongside pictures
+\usepackage{verbatim}
+\usepackage{array} % compatibility check
+\usepackage{multirow}
+
+% https://tex.stackexchange.com/questions/207232/problem-with-inserting-the-symbols-times-and-omega-when-using-arabi-package
+\DeclareRobustCommand{\timesr}{\fontfamily{artimes}\selectfont}
+\let\times\relax
+\DeclareMathSymbol{\times}{\mathbin}{symbols}{"02}
+
+\contest
+{제 12회 일본 정보올림피아드 (JOI 2012/2013)}%
+{봄 캠프 / 선발 고사}%
+{2012년 3월 19--25일, (도쿄 코마바, 요요기)}%
+
+\binoppenalty=10000
+\relpenalty=10000
+\exhyphenpenalty=10000
+
+\begin{document}
+
+%\raggedbottom
+%\displayauthorinfootertrue
+%\intentionallyblankpagestrue
+
+\import{./Day1/building2/}{building2.tex}
+\import{./Day1/fish/}{fish.tex}
+\import{./Day1/joi_flag/}{joi_flag.tex}
+\import{./Day2/broadcasting/}{broadcasting.tex}
+\import{./Day2/constellation/}{constellation.tex}
+\import{./Day2/rotate/}{_rotate.tex}
+\import{./Day3/fortune_telling/}{fortune_telling.tex}
+\import{./Day3/kangaroo/}{kangaroo.tex}
+\import{./Day3/sokoban/}{sokoban.tex}
+\import{./Day4/chinese/}{chinese.tex}
+\import{./Day4/copypaste/}{copypaste.tex}
+\import{./Day4/invitation/}{invitation.tex}
+\end{document}

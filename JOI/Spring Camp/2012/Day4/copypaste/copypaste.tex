@@ -1,0 +1,81 @@
+\begin{problem}{복사 붙여넣기}
+	{standard input}{standard output}
+	{17초}{512MB}{}
+	
+	텍스트 에디터의 제일 중요한 기능 중 하나로 복사 붙여넣기가 있다. JOI 회사는 복사 붙여넣기를 매우 고속으로 처리할 수 있는 텍스트 에디터의 개발을 시작했다. JOI 회사에 소속된 우수한 프로그래머인 당신은, 중요한 복사 붙여넣기 기능의 실제 구현을 담당하게 되었다. JOI 회사의 운명이 걸린 일이므로 정확하고 빠른 프로그램을 작성하고 싶다.
+	
+	구체적인 사양은 다음과 같다. 우선, 파일의 내용을 문자열 $S$ 라 하자. 이제 복사 붙여넣기가 $N$ 번 일어난다. $i$ 번째의 조작은 위치 $A_i$부터 위치 $B_i$까지의 문자열을 복사해서, 복사한 문자열을 원래 문자열의 위치 $C_i$에 삽입한다. 여기서, 위치 $x$는 앞에 부터 세어 $x$ 개의 문자 직후를 의미한다(위치 0은 문자열의 가장 앞부분이다). 단, 조작 후의 문자열 길이가 $M$을 넘을 경우, 길이가 $M$이 되도록 오른쪽부터 차례로 문자를 삭제한다. 
+	
+	문자열 길이 상한 $M$, 처음 문자열 $S$, 조작 횟수 $N$과 $N$ 번의 복사 붙여넣기 조작이 주어졌을 때, 조작 후의 문자열을 출력하는 프로그램을 작성하여라.
+	
+	\Constraints
+	
+	
+	\begin{tabular}{ll}
+		$1 \le M \le 1\ 000\ 000$ & 문자열의 길이 상한 \\
+		$1 \le N \le 1\ 000\ 000$ & 조작 횟수 \\
+	\end{tabular}
+	
+	
+	\InputFile
+	
+	다음 정보가 표준 입력으로 주어진다.
+	
+	\begin{itemize}
+		\item 첫째 줄에는 정수 $M$이 주어지며, 문자열 길이 상한을 의미한다.
+		\item 둘째 줄에는 문자열 $S$가 주어지며, 처음 문자열을 의미한다. $S$는 알파벳 소문자로 되어있고, 길이는 1 이상 $M$ 이하이다.
+		\item 셋째 줄에는 정수 $N$이 주어지며, 조작 횟수를 의미한다.
+		\item $3+i$ 번째 ($1 \le i \le N$) 줄에는 정수 $A_i$, $B_i$, $C_i$가 공백으로 구분되어 주어지며, $i$ 번째 조작은  위치 $A_i$부터 위치 $B_i$까지의 문자열을 복사해서, 복사한 문자열을 원래 문자열의 위치 $C_i$에 삽입한다는 것을 의미한다. $i$ 번째 문자열의 조작 직전의 문자 길이를 $L_i$ 라고 하면, $0 \le A_i < B_i \le L_i$ 와 $0 \le C_i \le L_i$ 를 만족한다.
+	\end{itemize}
+	
+	
+	\OutputFile
+	
+	표준 출력으로, $N$ 번의 조작 이후 문자열을 첫째 줄에 출력한다.
+	
+	\Scoring
+	
+	채점 데이터 중, 배점의 10\%에 대해 $M \le 100\ 000, N \le 100\ 000$을 만족한다.
+	
+	
+	\Examples
+	
+	\begin{example}
+		\exmp{
+			18
+			copypaste
+			4
+			3 6 8
+			1 5 2
+			4 12 1
+			17 18 0
+		}{%
+			acyppypastoopyppyp
+		}%
+	\end{example}
+	
+	\begin{itemize}
+		\item 처음 문자열은 \texttt{copypaste}이다.
+		\item 첫 번째 조작에서, 위치 3부터 위치 6까지의 문자열 \texttt{ypa}를 복사해서, 위치 8에 삽입해서, 문자열은 \texttt{copypastypae}가 된다.
+		\item 두 번째 조작에서, 위치 1부터 위치 5까지의 문자열 \texttt{opyp}를 복사해서, 위치 2에 삽입해서, 문자열은 \texttt{coopyppypastypae}가 된다.
+		\item 세 번째 조작에서, 위치 4부터 위치 12까지의 문자열 \texttt{yppypast}를 복사해서, 위치 1에 삽입해서, 문자열은 \texttt{cyppypastoopyppypastypae}가 되지만, 길이가 $M=18$을 넘으므로, 오른쪽에서 부터 문자열을 삭제해서, 문자열 \texttt{cyppypastoopyppypa}가 된다.
+		\item 네 번째 조작에서, 위치 17부터 위치 18까지의 문자열 \texttt{a}를 복사해서, 위치 1에 삽입해서, 문자열은 \texttt{acyppypastoopyppypa}가 되지만, 길이가 $M=18$을 넘으므로, 오른쪽에서 부터 문자열을 삭제해서, 문자열 \texttt{acyppypastoopyppyp}가 된다.
+	\end{itemize}
+
+	
+	\begin{example}
+		\exmp{
+			100
+			joi
+			3
+			0 1 0
+			3 4 3
+			2 3 3
+		}{%
+			jjooii
+		}%
+	\end{example}
+
+
+\end{problem}
+

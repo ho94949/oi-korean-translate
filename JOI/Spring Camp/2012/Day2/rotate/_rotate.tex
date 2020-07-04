@@ -1,0 +1,85 @@
+\begin{problem}{회전}
+	{standard input}{standard output}
+	{2초}{64MB}{}
+	
+	정사각형 모양의 격자 칸이 세로로 $N$ 행 가로로 $N$ 열 있는 총 $N \times N$ 모양의 격자가 있다. 위에서 $i$ 번째, 왼쪽에서 $j$ 번째 격자 칸을 $(i, j)$ 번 격자 칸이라고 부른다. $(i, j)$ 번 격자 칸에는 문자 $A_{ij}$가 쓰여 있다.
+	
+	어떤 정사각형 영역을 반시계방향으로 90도 회전하는 것을 $Q$번 반복한다. $k$ 번째의 회전은 $(I_k, J_k)$ 번 격자 칸이 가장 왼쪽 위인 $S_k \times S_k$ 개의 격자를 포함하는 정사각형을 회전한다.
+	
+	최종 상태를 구해서 출력하여라.
+	
+	
+	\Constraints
+	
+	
+	\begin{tabular}{ll}
+		$2 \le N \le 1\ 000$ & 격자의 크기 \\
+		$1 \le Q \le 2\ 000$ & 회전의 회수 \\
+	\end{tabular}
+	
+	
+	\InputFile
+	
+	다음 정보가 표준 입력으로 주어진다.
+	
+	\begin{itemize}
+		\item 첫째 줄에는 정수 $N$, $Q$가 공백으로 구분되어 주어진다. $N$은 격자의 크기이며, $Q$는 회전의 회수를 의미한다.
+		
+		\item 다음 $N$ 개의 줄에는 격자에 처음에 쓰인 문자가 주어진다. 이 중 $i$ 번째 줄에는 길이 $N$의 문자열이 주어진다. 이 문자열의 $j$ 번째 문자는 $A_{ij}$를 의미한다. 문자열은 알파벳 소문자만으로 이루어져 있다.
+		
+		\item 다음 $Q$ 개의 줄에는 회전을 의미하는 정보가 주어진다. 이 중 $k$ 번째 줄에는 정수 $I_k$, $J_k$, $S_k$ ($1 \le  I_k \le N-S_k+1$, $1 \le J_k \le N-S_k+1$, $2 \le S_k \le N$) 이 공백으로 구분되어 주어진다. 이는, $k$ 번째 회전이 $(I_k, J_k)$번 격자 칸이 가장 왼쪽 위인 $S_k \times S_k$ 개의 격자를 포함하는 정사각형을 회전한다는 것을 의미한다.
+	\end{itemize}
+	
+	
+	\OutputFile
+	
+	표준 출력으로, 최종 격자의 상태를 $N$개의 줄로 출력하여라. 즉, $i$ 번째 줄에는 $N$개의 문자로 이루어진 문자열이고, $j$ 번째 문자가 최종적으로 격자의 $(i, j)$번 격자 칸에 쓰인 문자가 되도록 출력하여라.
+	\Scoring
+	
+	채점 데이터 중, 배점의 10\%에 대해 $N \le 100, Q \le 100$을 만족한다.
+	
+	\Examples
+	
+	\begin{example}
+		\exmp{
+			4 1
+			abcd
+			efgh
+			ijkl
+			mnop
+			2 2 2
+		}{%
+			abcd
+			egkh
+			ifjl
+			mnop
+		}%
+	\end{example}
+	
+	이 입력은, 다음과 같은 격자판을 의미한다.
+	
+	\begin{verbatim} 
+	    abcd
+	    efgh
+	    ijkl
+	    mnop
+	\end{verbatim}
+	
+	회전의 정보를 의미하는 첫째 줄은, ``(2, 2)번 격자 격자 칸이 가장 왼쪽 위인 $2 \times 2$ 개의 격자를 포함하는 정사각형을 회전한다"는 것을 의미한다. 즉,
+	
+	\begin{verbatim}
+	    fg
+	    jk
+	\end{verbatim}
+	를 반시계방향으로 90도 회전해서, 
+
+	\begin{verbatim}
+	    abcd
+	    egkh
+	    ifjl
+	    mnop
+	\end{verbatim}
+	
+	가 된다.
+	
+\end{problem}
